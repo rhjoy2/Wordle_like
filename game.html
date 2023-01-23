@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Game</title>
+    <style>
+        h1 {
+
+        text-align: center;
+            }
+
+        #wordle-matrix {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        }
+        .free-space {   
+        border: 2px solid rgb(160, 159, 159);
+        border-radius: 3px;
+        margin: 2px;
+        font-size: 2.5rem;
+        font-weight: 700;
+        height: 3rem;
+        width: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        }
+        .filled-space {
+        border: 2px solid rgb(124, 123, 123);
+        }
+        .letter-row {
+        display: flex;
+        }
+        .second-row {
+        margin: 0.5rem 0;
+        }
+        #k_cont {
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        }
+   
+        #k_cont div {
+        display: flex;
+        }
+        
+        .k_b {
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 0.5rem;
+        margin: 0 2px;
+        cursor: pointer;
+        text-transform: uppercase;
+        }
+        .mode {
+            float:right;
+        }
+        .switchmode {
+            cursor: pointer;
+            border: 1px solid rgb(67, 67, 67);
+            border-radius: 40%;
+            width: 20px;
+            text-align: center;
+            padding: 1px;
+            margin-left: 8px;
+        }
+        .darkmode{
+            background-color: rgb(19, 19, 19);
+            color: #f3ebeb;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mode">
+        Dark mode:            
+        <span class="switchmode">OFF</span>
+    </div>
+    <br/>
+    <h1>Wordle Game</h1>
+    <!-- <button onClick="window.location.reload();">New Game</button> -->
+    <div id="wordle-matrix"></div>
+    <div id="k_cont">
+        <div class="first-row">
+            <button class="k_b">q</button>
+            <button class="k_b">w</button>
+            <button class="k_b">e</button>
+            <button class="k_b">r</button>
+            <button class="k_b">t</button>
+            <button class="k_b">y</button>
+            <button class="k_b">u</button>
+            <button class="k_b">i</button>
+            <button class="k_b">o</button>
+            <button class="k_b">p</button>
+        </div>
+        <div class="second-row">
+            <button class="k_b">a</button>
+            <button class="k_b">s</button>
+            <button class="k_b">d</button>
+            <button class="k_b">f</button>
+            <button class="k_b">g</button>
+            <button class="k_b">h</button>
+            <button class="k_b">j</button>
+            <button class="k_b">k</button>
+            <button class="k_b">l</button>
+        </div>
+        <div class="third-row">
+            <button class="k_b">Enter</button>
+            <button class="k_b">z</button>
+            <button class="k_b">x</button>
+            <button class="k_b">c</button>
+            <button class="k_b">v</button>
+            <button class="k_b">b</button>
+            <button class="k_b">n</button>
+            <button class="k_b">m</button>
+            <button class="k_b">Delete</button>
+        </div>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="gamescript.js" type="module"></script>
+</body>
+</html>
